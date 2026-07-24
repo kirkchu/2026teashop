@@ -1,3 +1,4 @@
+window.ORDER_API_URL = window.ORDER_API_URL || 'https://script.google.com/macros/s/AKfycbyCytSvZbWrCNydbsz_A-Ctyy6ws1BORMl4pXC4omU169eqwPM6ijep-Pmo0To11mkN/exec';
 const drinks = [
   {c:'世界首創',n:'珍珠奶茶',cold:{S:100,M:190},hot:{S:115,M:220}},
   {c:'發源',n:'頂級烏瓦紅茶凍飲',cold:{S:85,M:160},hot:{S:100,M:190}},
