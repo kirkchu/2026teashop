@@ -9,4 +9,4 @@
 
 ## 網站
 
-GitHub Pages URL：部署後將在此填入。
+GitHub Pages URL：[https://kirkchu.github.io/2026teashop/](https://kirkchu.github.io/2026teashop/)
