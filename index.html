@@ -1,0 +1,45 @@
+<!doctype html>
+<html lang="zh-Hant">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="春水堂班級飲料點餐" />
+    <title>春水堂｜班級點餐</title>
+    <link rel="stylesheet" href="styles.css" /><style>input[type=radio]{width:auto;height:auto;margin:0;padding:0}input[type=hidden]{display:none}</style>
+  </head>
+  <body>
+    <header class="site-header">
+      <a class="brand" href="index.html" aria-label="春水堂班級點餐首頁"><span class="seal">春</span><span>春水堂</span><i></i><b>班級點餐</b></a>
+      <nav><a class="active" href="index.html">我要點餐</a><a href="status.html">目前點餐狀況</a></nav>
+    </header>
+    <main>
+      <section class="menu-section" aria-labelledby="menu-title">
+        <div class="section-heading"><p id="menu-title">菜單</p><span>請依照原始菜單選擇您的飲品</span></div>
+        <img class="menu-image" src="menu.jpg" alt="春水堂完整飲品與餐點菜單" />
+      </section>
+      <section class="order-grid" aria-label="點餐表單與價格">
+        <form id="order-form" class="order-panel">
+          <div class="panel-heading"><span class="heading-icon">✦</span><div><h1>填寫點餐資訊</h1><p>送出前請確認口味與份數</p></div></div>
+          <div class="fields">
+            <label>班級／姓名 <em>*</em><input id="name" name="name" placeholder="請輸入班級或姓名" required maxlength="40" /></label>
+            <label>品項分類 <em>*</em><select id="category" name="category"></select></label>
+            <label>選擇飲品 <em>*</em><select id="drink" name="drink"></select></label>
+          </div>
+          <fieldset><legend>冷／熱 <em>*</em></legend><div id="temperature-options" class="choice-row"></div></fieldset>
+          <div class="option-grid">
+            <fieldset><legend>尺寸 <em>*</em></legend><div id="size-options" class="choice-row compact"></div></fieldset>
+            <fieldset><legend>甜度 <em>*</em></legend><div class="choice-row compact" id="sugar-options"></div></fieldset>
+            <fieldset><legend>冰量 <em>*</em></legend><div class="choice-row compact" id="ice-options"></div></fieldset>
+            <label class="quantity-label">數量 <em>*</em><span class="quantity"><button type="button" id="minus" aria-label="減少數量">−</button><input id="quantity" name="quantity" value="1" min="1" max="20" type="number" inputmode="numeric" /><button type="button" id="plus" aria-label="增加數量">＋</button></span></label>
+          </div>
+          <input id="unit-price" name="unitPrice" type="hidden" /><input id="total-price" name="totalPrice" type="hidden" />
+          <button id="submit-order" class="submit-order" type="submit">送出訂單 <span>→</span></button>
+          <p class="form-message" id="form-message" role="status"></p>
+        </form>
+        <aside class="price-panel" aria-live="polite"><div class="panel-heading"><span class="heading-icon">¥</span><div><h2>價格統計</h2><p>即時更新</p></div></div><div id="price-summary"></div></aside>
+      </section>
+    </main>
+    <footer>春水堂班級點餐｜請於送出前再次確認內容</footer>
+    <script src="config.js"></script><script src="app.js"></script>
+  </body>
+</html>
